@@ -14,7 +14,7 @@ public class DefaultMovieSearcherService implements MovieSearcherService {
 
     public DefaultMovieSearcherService(MovieListSupplier movieListSupplier) {
         this.movieListSupplier = movieListSupplier;
-        movieList = movieListSupplier.get();
+        movieList = this.movieListSupplier.get();
     }
 
     @Override
@@ -40,5 +40,25 @@ public class DefaultMovieSearcherService implements MovieSearcherService {
     @Override
     public List<Movie> searchByDescription(String desc) {
         return movieList.stream().filter(movie -> movie.getDescription().contains(desc)).collect(Collectors.toList());
+    }
+
+    /**
+     *
+     * @param rating
+     * @return
+     */
+    @Override
+    public List<Movie> searchByRating(int rating) {
+        return null;
+    }
+
+    /**
+     *
+     * @param rating
+     * @return
+     */
+    @Override
+    public List<Movie> searchMoviesWithHigherRating(int rating) {
+        return null;
     }
 }

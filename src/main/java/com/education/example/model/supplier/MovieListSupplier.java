@@ -5,7 +5,6 @@ import com.education.example.model.Movie;
 
 import java.time.LocalDate;
 import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.Supplier;
 
 public class MovieListSupplier implements Supplier<List<Movie>> {
@@ -40,6 +39,7 @@ public class MovieListSupplier implements Supplier<List<Movie>> {
                     .directorList(Arrays.asList(directorList.get(random.nextInt(directorList.size()-1)),
                             directorList.get(random.nextInt(directorList.size()-1))))
                     .description("Lorem Ipsum etc. " + (i%9 == 0 ? "test" : "not test"))
+                    .rating(random.nextInt(5))
                     .build()
             );
         }

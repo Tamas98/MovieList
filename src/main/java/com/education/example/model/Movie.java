@@ -5,8 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @AllArgsConstructor
@@ -20,7 +18,6 @@ public class Movie {
     private List<Genre> genreList;
     private String description;
     private List<String> castList;
-
-
+    private int rating;
 
 }

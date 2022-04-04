@@ -14,5 +14,7 @@ public interface MovieSearcherService {
     List<Movie> searchByCastMember(String name);
     List<Movie> searchByGenre(Genre genre);
     List<Movie> searchByDescription(String desc);
+    List<Movie> searchByRating(int rating);
+    List<Movie> searchMoviesWithHigherRating(int rating);
 
 }
